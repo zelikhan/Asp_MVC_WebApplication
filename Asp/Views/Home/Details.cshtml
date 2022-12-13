@@ -1,0 +1,66 @@
+﻿@model Asp.Models.student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html style="background-color: lightgreen;">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>student</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.address)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.gpa)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.gpa)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.p_no)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.p_no)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.age)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.age)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

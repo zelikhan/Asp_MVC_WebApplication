@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Asp.Models.student>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html style="background-color: aquamarine;">
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    
+</head>
+<body>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+
+
+    <h1 style="color:Tomato;">LAB 11</h1>
+    <p style="color:DodgerBlue;">Question : Complete the lab as per instructions and requirements given in the lab. </p>
+    <p style="color:MediumSeaGreen;">...................................................................................................................................................................</p>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.id)
+            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gpa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.p_no)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.age)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.gpa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.p_no)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <p style="color:slategrey;">Designed By Muzammil Shoukat</p>
+</body>
+</html>
